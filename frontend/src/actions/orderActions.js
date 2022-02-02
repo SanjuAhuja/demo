@@ -15,7 +15,7 @@ import { ORDER_CREATE_REQUEST, ORDER_CREATE_FAIL, ORDER_CREATE_SUCCESS, ORDER_CR
         const {
           userSignin: { userInfo },
         } = getState();
-        const { data } = await Axios.post('http://localhost:5000/api/orders/', order, {
+        const { data } = await Axios.post('http://localhost:6000/api/orders/', order, {
           headers: {
             Authorization: `Sanju ${userInfo.token}`,
           },
@@ -40,7 +40,7 @@ import { ORDER_CREATE_REQUEST, ORDER_CREATE_FAIL, ORDER_CREATE_SUCCESS, ORDER_CR
         userSignin: { userInfo },
       } = getState();
       try {
-        const { data } = await Axios.get(`http://localhost:5000/api/orders/${orderId}`, {
+        const { data } = await Axios.get(`http://localhost:6000/api/orders/${orderId}`, {
           headers: { Authorization: `Sanju ${userInfo.token}` },
         });
         dispatch({ type: ORDER_DETAILS_SUCCESS, payload: data });
