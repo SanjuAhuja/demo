@@ -29,7 +29,7 @@ export default function HomeScreen(props) {
 
   return (
     <div>
-      <h2>Top Sellers</h2>
+    
       {loadingSellers ? (
         <LoadingBox></LoadingBox>
       ) : errorSellers ? (
